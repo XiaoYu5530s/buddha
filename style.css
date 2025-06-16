@@ -718,11 +718,6 @@ body {
     font-size: 1.1rem;
     width: 100%;
     display: block;
-  }
-
-  .dots {
-    display: none;
-  }
 }
 /* ========== 經銷委任銷售名單 ========== */
 .agent-section {
