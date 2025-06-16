@@ -684,6 +684,10 @@ body {
     position: relative;
   }
 
+  .logo-area {
+  display: none;
+  }
+
   .menu-toggle {
     display: block;
     font-size: 2rem;
