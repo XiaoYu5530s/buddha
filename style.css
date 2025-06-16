@@ -665,14 +665,51 @@ body {
 }
 
 /* 響應式處理：手機版上下排列 */
+.menu-toggle {
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* 手機版切換 */
 @media (max-width: 768px) {
-  .contact-map-container {
+  .header-container {
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  .map-container,
-  .contact-info {
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #900;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 0.5rem 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.1rem;
   }
 }
 /* ========== 經銷委任銷售名單 ========== */
