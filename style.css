@@ -684,10 +684,6 @@ body {
     position: relative;
   }
 
-  .logo-area {
-  display: none;
-  }
-
   .menu-toggle {
     display: block;
     font-size: 2rem;
@@ -730,6 +726,10 @@ body {
 
   .dots {
     display: none;
+  }
+
+  .logo-area {
+  display: none;
   }
 }
 /* ========== 經銷委任銷售名單 ========== */
