@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="top-header new-header" style="background-image: url('images/A1.jpg'); background-size: cover; background-position: center;">
+  <header class="top-header new-header" style="background-image: url('images/A1.JPG'); background-size: cover; background-position: center;">
     <div class="header-container">
       <div class="logo-area">
         <img src="images/D1.png" alt="佛陀山 Logo" class="logo-img logo-animate" />
@@ -15,7 +15,7 @@
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <nav class="main-nav" id="mainNav">
         <a href="#" class="active">首頁</a>
-        <a href="class/activity.html">相關須知</a>
+        <a href="class/activity.html">活動公告</a>
         <a href="class/activity2.html">產品簡介</a>
         <a href="class/activity3.html">關於造生基</a>
         <a href="#">佛陀山簡介</a>
@@ -85,7 +85,7 @@
 </div>
   <div class="video-wrapper">
     <div class="video-embed">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/qlyWry9f1Y8?si=l4wXkw17NnY3Mxda" 
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/d9bfqY0iK10" 
         title="福壽園簡介" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="video-text">
@@ -139,7 +139,7 @@
   <footer class="site-footer">
     <div class="container">
       <p>佛陀山生基園</p>
-      <p>園區地址 : 249新北市八里區楓櫃段</p>
+      <p>園區地址 : 249新北市八里區</p>
       <p>服務專線 : 0800-244-588</p>
     </div>
   </footer>
@@ -180,9 +180,8 @@
     function toggleMenu() {
     const nav = document.getElementById("mainNav");
     nav.classList.toggle("show");
-
-    document.body.classList.toggle("menu-open");  
   }
+  </script>
 </script>
 
   <style>
@@ -228,13 +227,11 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-      min-height: 200px; /* ✅ 加這行，確保手機初始不為 0 高度 */
-      z-index: 1;
-    }
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
 
 .slide {
   display: none;
