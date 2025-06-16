@@ -720,10 +720,6 @@ body {
     display: block;
   }
 
-  .slideshow-container {
-    display: none;
-  }
-
   .dots {
     display: none;
   }
