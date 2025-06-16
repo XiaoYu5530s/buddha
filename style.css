@@ -728,10 +728,12 @@ body {
     display: none;
   }
 
-  .logo-area {
-  display: none;
+  /* ✅ ⬇️ 加在這裡 */
+  body.menu-open .logo-area {
+    display: none;
   }
 }
+
 /* ========== 經銷委任銷售名單 ========== */
 .agent-section {
   max-width: 1000px;
