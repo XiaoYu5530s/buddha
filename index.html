@@ -228,11 +228,13 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     .slideshow-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden;
-}
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+      min-height: 200px; /* ✅ 加這行，確保手機初始不為 0 高度 */
+      z-index: 1;
+    }
 
 .slide {
   display: none;
