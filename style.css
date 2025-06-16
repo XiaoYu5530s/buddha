@@ -1,0 +1,728 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* ========== HEADER 排版 ========== */
+.site-header {
+  background-image: url('images/A1.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 150px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo-area img {
+  height: 100px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+.main-nav a.active {
+  color: #900;
+}
+
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #900;
+}
+
+/* ========== 手機版導覽列 ========== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #900;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 0.5rem 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
+/* ========== HERO 區塊 ========== */
+.hero {
+  background-color: #e0f2f1;
+  text-align: center;
+  padding: 15rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* ========== FEATURES 區塊 ========== */
+.features {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 2rem;
+  color: #006633;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature-item {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.features-highlight {
+  text-align: center;
+  padding: 1rem 0rem;
+  background: #ffffff;
+}
+
+.features-highlight .section-title {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cloud-deco {
+  height: 24px;
+  width: auto;
+  opacity: 0.6;
+}
+
+.features-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 0rem;
+  border-top: 1px solid hsl(0, 0%, 39%);
+  border-bottom: 1px solid #6d6d6d;
+  padding: 2rem 0;
+}
+
+.feature-item {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-icon {
+  height: 60px;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.feature-label {
+  color: #666666;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.feature-item h3 {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.intro-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.intro-title .feature-label {
+  margin: 0;
+}
+
+.intro-title .intro-text {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+
+/* ========== 活動公告 ========== */
+.announcement-list {
+  padding: 0rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.announcement-list .section-title {
+  font-size: 2rem;
+  background-color: #b8b8b8;
+  border-left: 6px solid rgb(218, 0, 0);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.announcement-card {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background: #f9f9f9;
+  transition: background 0.3s;
+}
+
+.announcement-card:hover {
+  background: #f1f1f1;
+}
+
+.announcement-card h3 {
+  font-size: 1.2rem;
+  color: #900;
+  margin-bottom: 0.5rem;
+}
+
+.announcement-card .date {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.announcement-card p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.breadcrumb {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 0.95rem;
+  color: #333;
+}
+.breadcrumb a {
+  color: #632872;
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 2rem 0;
+  font-family: sans-serif;
+}
+
+.pagination .page {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination .page:hover {
+  background-color: #eee;
+}
+
+.pagination .active {
+  background-color: #a00;
+  color: white;
+  border-color: #a00;
+}
+
+.pagination .next {
+  font-weight: bold;
+}
+
+
+
+/* ========== 聯絡 & Footer ========== */
+.contact {
+  background-color: #e8f5e9;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.contact h2 {
+  margin-bottom: 1rem;
+  color: #2E7D32;
+}
+
+.site-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* ========== 首頁youtube ========== */
+.video-intro {
+  background: url("images/P1.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 3rem 1rem;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.video-embed {
+  flex: 1 1 480px;
+  min-width: 300px;
+}
+
+.video-embede {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.video-wrappere {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.video-text {
+  flex: 1 1 480px;
+  min-width: 300px;
+  color: #333;
+}
+
+.video-text h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.video-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.btn-red {
+  display: inline-block;
+  background: #900;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-red:hover {
+  background: #700;
+}
+
+/* ========== 首頁產品介紹 ========== */
+.product-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #ffffff;
+}
+
+.section-title1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.cloud-icon {
+  width: 40px;
+  margin-left: 0.5rem;
+}
+
+
+.product-swiper img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.product-swiper h3 {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.highlight {
+  color: #a00;
+}
+
+.scroll-button-bar {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  background: #000000;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  white-space: nowrap;
+}
+
+.scroll-button-bar button {
+  flex: 0 0 auto;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.scroll-button-bar button:hover {
+  background: #900;
+  color: rgb(0, 0, 0);
+  border-color: #900;
+}
+
+/* Swiper 基本樣式 */
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  overflow: hidden; /* 防止內容外溢 */
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: ease;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: auto; /* 或你可以改為固定寬度 例如 300px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* ========== 首頁關於介紹 ========== */
+.features-section {
+  padding: 4rem 1rem;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.features-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature-box img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.feature-box h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.feature-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.logo-animate {
+  animation: flickerGlow 2s infinite;
+}
+
+.image-bg-wrapper {
+  background-color: #ffffff; /* 深藍背景，可改成你想要的色碼 */
+  padding: 0rem 0;
+  text-align: center;
+}
+
+.center-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.feature-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.feature-box {
+  transition: transform 0.2s;
+}
+
+.feature-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== 產品簡單介紹 ========== */
+
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-item {
+  text-align: center;
+  width: 200px;
+}
+
+.product-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.product-item p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111;
+  margin: 0;
+}
+
+.product-item .highlight {
+  color: #a00;
+}
+
+.page-header {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.breadcrumb {
+  text-align: left;
+  margin: 1rem auto;
+  font-size: 0.95rem;
+  color: #585858;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #dddddd;
+  border-left: 6px solid #a00;
+  padding: 1rem;
+  margin: 0;
+}
+/* ========== 園區地理位置 ========== */
+.contact-map-section {
+  padding: 2rem;
+  background: #f7f7f7;
+}
+
+.contact-map-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* 左側聯絡資訊 */
+.contact-info {
+  flex: 1 1 45%;
+  min-width: 280px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* 右側地圖容器 */
+.map-container {
+  flex: 1 1 50%;
+  min-width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 響應式處理：手機版上下排列 */
+@media (max-width: 768px) {
+  .contact-map-container {
+    flex-direction: column;
+  }
+
+  .map-container,
+  .contact-info {
+    width: 100%;
+  }
+}
+/* ========== 經銷委任銷售名單 ========== */
+.agent-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.agent-section h2, .agent-section h3 {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.agent-section ol {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+thead th {
+  background: #e0e0e0;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+tbody td {
+  padding: 0.75rem;
+  border-top: 1px solid #ddd;
+}
+
+
+
+
+
+/* ========== LOGO 效果 ========== */
+@keyframes flickerGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #ffd700);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #fff9cc);
+  }
+}
