@@ -724,10 +724,6 @@ body {
     display: none;
   }
 
-  .dots {
-    display: none;
-  }
-
   /* ✅ ⬇️ 加在這裡 */
   body.menu-open .logo-area {
     display: none;
